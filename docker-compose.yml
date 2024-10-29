@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: conciliador
+      POSTGRES_PASSWORD: conciliador
+      POSTGRES_USER: postgres
+    volumes:
+      - ./data/pg:/var/lib/postgresql/data  
+    ports:
+      - 5435:5432
+    restart: on-failure:3
+
+  redis:
+    image: redis:latest
+    command: redis-server
+    volumes:
+      - ./data/redis:/var/lib/redis
+      - ./data/redis-config:/usr/local/etc/redis/redis.conf
+    ports:
+      - 6380:6379
