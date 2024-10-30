@@ -34,7 +34,7 @@ class AdminPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
-            ->brandName('Adm Conferire')
+            ->brandName('Adm ' . config('app.name'))
             // ->brandLogo(asset('images/logo.svg'))
             ->favicon(asset('images/favicon.ico'))
             ->maxContentWidth(MaxWidth::Full)

@@ -32,18 +32,18 @@ class ContractSeeder extends Seeder
             'activity_branch' => $data['atividade_principal'][0]['text'] ?? 'Suporte técnico, manutenção e outros serviços em tecnologia da informação (Dispensada *)',
             'cpf_cnpj' => $cnpj,
             'name' => 'PLUSTECH TECNOLOGIA',
-            'email' => 'plustech@conferire.com',
+            'email' => 'plustech@conciliador.com',
             'company_count' => 100,
         ];
 
         $contract = Contract::create($contract);
-        
+
         $user = User::create([
             'name' => $contract->name,
             'email' => $contract->email,
             'password' => bcrypt('password'),
         ]);
-        
+
         $role = Role::firstOrCreate([
             'name' => 'Administrador Contrato',
         ]);

@@ -53,7 +53,7 @@ class AppPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Cyan,
             ])
-            ->brandName('Conferire')
+            ->brandName(config('app.name'))
             // ->brandLogo(asset('images/logo.svg'))
             ->favicon(asset('images/favicon.ico'))
             ->maxContentWidth(MaxWidth::Full)

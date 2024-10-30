@@ -190,7 +190,7 @@ class ContractResource extends Resource
                             TextInput::make('email')
                                 ->columnSpan(6)
                                 ->label('Email')
-                                ->placeholder('plustech@conferire.com')
+                                ->placeholder('plustech@conciliador.com')
                                 ->required()
                                 ->email()
                                 ->unique(
